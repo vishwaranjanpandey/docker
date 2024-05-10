@@ -8,6 +8,9 @@ there are many docker images available on hub.docker.com, we can just pull them 
 	docker inspect < image name > -- to view the detaied information in JSON output
 	docker rmi <image name> -- to remove a image from local machine
 	docker image prune -- to remove all unused images from local machine
+	docker rename <cont ID > <New Name> --  to rename the container name
+	docker ps -a -- to show all container running or stopped 
+	docker stop $(docker ps -a) -- to stop all container running container
 	
 how to run containers from a docker image 
 
@@ -33,6 +36,13 @@ how to get inside a running container
 	docker run -d nginx ( creates a new container in detached mode )
 	docker ps  -- displays the running containers, note down the container id
 	docker exec -it <container id> bash 
+
+	dcoker ps >>>>>
+CONTAINER ID   IMAGE                     COMMAND                  CREATED      STATUS        PORTS                    NAMES
+63c93bf9b383   sonarqube:lts-community   "/opt/sonarqube/dock…"   5 days ago   Up 26 hours   0.0.0.0:9000->9000/tcp,  sonar
+
+	[ CMD ] command field says whatever the first thing run inside the container what should happen inside the container and respective process should up and running and serve the end user. 
+	[PORTS] How to access application from outside from the machine
 
 how to come out of a container
 	ctrl pq ( it is mandatory to use this command always )
