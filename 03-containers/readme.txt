@@ -30,6 +30,11 @@ how to run containers from a docker image
 	docker rm <container id> -- to remove a stopped/exited container
 	docker rm -f <container id> -- to remove a container forcefully though it is in running state 
 	docker container prune -- to remove all stopped/exited containers
+	docker cp <file name> <cont-id>:/tmp -- to copy file inside the container
+	docker exec <cont-id> ls -la /tmp -- you can perform some action by using exec command 
+	docker logs <cont-id> -- to check the logs of any container what is happening with container
+	docker logs -f <cont-id> --  to watch continious live data logs
+	netstat -anp | grep <port-number> -- to check any port is used or not
 	
 how to get inside a running container
 
