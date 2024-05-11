@@ -91,6 +91,9 @@ updating container network
 
 when you restart docker service your container will not restart automatically bydefault so to make container up and running automatically you can use restart policy
 
+	docker run -d -P --restart always <image-name>  --  to apply restart policy on any container
+	docker update --restart always <cont-id>  -- to change the restart policy for an already running container 
+
 --restart flag: specify when the container should be automatically restarted
 	1) no(default): Never restart the container
 	2) on-failure: only if the container fails (exits with non-zero exit code)
