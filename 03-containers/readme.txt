@@ -73,10 +73,14 @@ how to access the applications running inside the container from external world 
 ===============================================================================================================================
 
 Advanced Container commands 
+	docker stats --no-stream  -- if you want to see container utilization o/p
+CONTAINER ID   NAME      CPU %     MEM USAGE / LIMIT     MEM %     NET I/O       BLOCK I/O        PIDS
+63c93bf9b383   sonar     1.60%     1.417GiB / 3.817GiB   37.12%    1.08kB / 0B   296MB / 1.71MB   185
 
 limit container resources
 	docker run -d --restart unless-stopped -p 8080:80 --memory 500M --memory-reservation 256M nginx
 	docker run -d -P --cpus=".5" nginx
+	docker run -d -P --memory 500M nginx
 
 Run a docker container, overriding the system default logging driver settings:
 	docker run --log-driver json-file --log-opt max-size=50m nginx
