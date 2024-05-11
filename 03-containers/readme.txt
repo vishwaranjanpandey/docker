@@ -89,8 +89,10 @@ updating container network
 	docker network connect net2 contid
 	( container will be present in both net1 & net2 networks )
 
+when you restart docker service your container will not restart automatically bydefault so to make container up and running automatically you can use restart policy
+
 --restart flag: specify when the container should be automatically restarted
 	1) no(default): Never restart the container
 	2) on-failure: only if the container fails (exits with non-zero exit code)
-	3) always: Always restart the container whether it succeeds or fails. Also start the container automatically on  daemon startup
+	3) always: Always restart the container whether it succeeds or fails. Also start the container automatically on daemon startup
 	4) unless-stopped: Always restart the container whether it succeeds or fails, and the daemon startup, unless the container was manually stopeed
