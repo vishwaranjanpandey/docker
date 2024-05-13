@@ -113,12 +113,11 @@ Advanced image concepts
        docker image prune --dangling=true
 
 
-how to delete all images 
+Important image command 
 ==========================
 	docker images prune -a  --  to delete all unused images 
-
-
-
+	docker inspect <Image-id>  --  everything you can see about images
+	docker history <image-id>  -- to know the details about layers
 
 
 
