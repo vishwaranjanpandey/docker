@@ -24,8 +24,8 @@ Docker run test2 bash
 
 The ENTRYPOINT specifies a command that will always be executed when the container starts. The CMD specifies arguments that will be fed to the ENTRYPOINT.
 
-
-
+CMD : CMD field can be overridden with new command field while running container, you can pass command as argument with CMD  
+ENTRYPOINT:  entrypoint can not be overridden
 
 Both CMD and ENTRYPOINT instructions define what command gets executed when running a container. There are few rules that describe their co-operation.
 	1.	Dockerfile should specify at least one of CMD or ENTRYPOINT commands.
