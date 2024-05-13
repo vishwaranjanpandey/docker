@@ -112,6 +112,16 @@ Advanced image concepts
        docker images -f dangling=true
        docker image prune --dangling=true
 
+
+how to delete all images 
+==========================
+	docker images prune -a  --  to delete all unused images 
+
+
+
+
+
+
    Inspect image metadata:
        docker image inspect nginx:1.14.0
        docker image inspect nginx:1.14.0 --format "{{.Architecture}}"
