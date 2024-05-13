@@ -6,7 +6,7 @@ These instructions are called directives.
 Dockerfiel directive:
 =====================
 
-FROM: start a new build stage and sets the base image. usually must be the first directive in the Dockerfile (except ARG can be placed before FROM).
+FROM: base image from where you start to create images. start a new build stage and sets the base image. usually must be the first directive in the Dockerfile (except ARG can be placed before FROM).
 
 ENV: set environment variables. These can be refefenced in the Dockerfile itself and are visible to the container at runtime. 
 
