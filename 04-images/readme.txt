@@ -59,8 +59,8 @@ two ways
           CMD /usr/sbin/nginx -g "daemon off;"
       save&quit
 
-      docker build -f /path/to/mydockerfile -t <new image name> . (context "." (currnet directory))
-
+      docker build -f /path/to/mydockerfile -t <new image name> . (build context "." (currnet directory))
+	IMP >>>the last feild is build context if your image needs any input those input can be providen with build context
 
 how to push docker images into docker hub
 ==========================================
