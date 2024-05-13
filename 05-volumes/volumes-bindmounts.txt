@@ -6,7 +6,7 @@ Bind Mounts vs. Volumes:
   When mounting external storage to a container, you can use either a bind mount or a volume.
   We can use --mount OR --volume syntax to attache external storage to a container.
 
-Bind mounts:
+Bind mounts: (ON HOST MACHINE VOLUME)
   1) Mount a specific path on the host machine to the container. 
   2) Not portable, dependant on the host machine's file system and directory structure. 
 Volumes: 
@@ -54,6 +54,8 @@ we can create both volumes/bind mounts using either of the syntax.
         docker run -v /home/cloud_user/message:/root:ro busybox cat /root/message.txt
    
      Run a container with a mounted volume.
+	docker run od -P -v <volume name>:<to which container volume path you want to mount> <container-ID> 
+	docker run -d -P -v volume1:/usr/local/tomcat/logs tomcat 
         docker run -v my-volume:/root busybox sh -c 'cat /root/message.txt'
 
 Note: in swarm mode when we deploy services, only --mount can be used, -v syntax doesn't work with services. 
